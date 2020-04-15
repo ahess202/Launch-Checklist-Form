@@ -71,10 +71,10 @@ window.addEventListener('load', function() {
          };
       };
 
-      if (inputsFilled === false) {
+      if (!inputsFilled) {
          alert('Must complete all fields!')
          e.preventDefault();
-      } else if( !isNaN(pilotName.value) || !isNaN(copilotName.value)) {
+      } else if (!isNaN(pilotName.value) || !isNaN(copilotName.value)) {
          alert('Please Enter Valid Inputs for Pilot and Co-pilot!');
          e.preventDefault();
       } else if(isNaN(cargoMass.value)|| isNaN(fuelLevel.value)) {
