@@ -1,12 +1,25 @@
 <!DOCTYPE>
 <html>
     <head>
+        <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
         <title>Launch Checklist</title>
         <link rel = "stylesheet" type = "text/css" href = "styles.css" />
         <script src = "script.js"></script>
     </head>
     <body>
         <h1>Launch Checklist Form</h1>
+        <div id="planetSelector">
+            <label for="planetChoice" >Select a Planet</label>
+            <select name="planetChoice" id="planets">
+                <option value="0">Tatooine</option>
+                <option value="1">Pern</option>
+                <option value="2">Saturn/Titan</option>
+                <option value="3">Mars</option>
+                <option value="4">K2-18b</option>
+                <option value="5">Jupiter/Europa</option>
+            </select>
+        </div>
+        
         <div id="missionTarget">
             <!-- Fetch some planetary data -->
         </div> 
@@ -16,25 +29,25 @@
                     <label>Pilot Name <input type="text" name="pilotName" id="pilotName"/></label>
                 </div>
                 <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
-                    <label>Co-pilot Name <input type="text" name="copilotName"/></label>
+                    <label>Co-pilot Name <input type="text" name="copilotName" id="copilotName"/></label>
                 </div>
                 <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
-                    <label>Fuel Level (L) <input type="text" name="fuelLevel"/></label> 
+                    <label>Fuel Level (L) <input type="text" name="fuelLevel" id="fuelLevel"/></label> 
                 </div>
                 <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
-                    <label>Cargo Mass (kg) <input type="text" name="cargoMass"/></label>
+                    <label>Cargo Mass (kg) <input type="text" name="cargoMass" id="cargoMass"/></label>
                 </div>
                 <button id="formSubmit">Submit</button>
             </form>
         </div>
         <div id="launchStatusCheck">
             <h2 id="launchStatus">Awaiting Information Before Launch</h2>
-            <div  id="faultyItems">
-                <ol>
+            <div id="faultyItems">
+                <ol id="statusList">
                     <li id="pilotStatus">Pilot Ready</li>
                     <li id="copilotStatus">Co-pilot Ready</li>
-                    <li id="fuelStatus">Fuel level high enough for launch</li>
-                    <li id="cargoStatus">Cargo mass low enough for launch</li>
+                    <li id="fuelStatus">Fuel level high enough for launch!</li>
+                    <li id="cargoStatus">Cargo mass low enough for launch!</li>
                 </ol>
             </div>
         </div>    

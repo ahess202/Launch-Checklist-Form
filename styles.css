@@ -1,9 +1,23 @@
+html {
+    font-family: 'Orbitron';
+    background: url(https://www.wallpapers13.com/wp-content/uploads/2015/12/Space-Star-Background-HD-Wallpaper-Desktop-915x515.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
 h1 {
+    color: white;
     text-align: center;
 }
+h2 {
+    color: white;
+    background-color: black;
+}
 
-div {
-    text-align: left;
+#planetSelector {
+    margin-left: 40%;
+    background-color: black;
+    display: inline-block;
+    border: solid white 3px;
+    padding: 10px;
 }
 
 #faultyItems {
@@ -11,7 +25,8 @@ div {
 }
 
 #launchForm {
-    background-color: #ECF0F1;
+    background: url(https://wallpaperplay.com/walls/full/4/3/2/31442.jpg);
+    background-size: cover;
     text-align: center;
     margin: auto;
     width: 25%;
@@ -20,26 +35,29 @@ div {
 }
 
 #launchStatusCheck {
-    background-color: #ECF0F1;
+    background: url(https://wallpaperaccess.com/full/384578.jpg);
+    background-size: cover;
     text-align: center;
     margin: 50px auto;
     width: 50%;
     border: 3px solid black;
     padding: 10px;
-}
-
-#missionTarget img {
-    max-width: 40%;
-    max-height: 250px;
 }
 
 #missionTarget {
-    background-color: #ECF0F1;
+    background: url(https://thewallpaper.co//wp-content/uploads/2017/10preview/planet-planets-starsart-cool-images-mobile-orbit-ship-space-hd-space-wallpapers-hd-images-station.jpg);
+    background-size: cover;
     text-align: center;
     margin: 50px auto;
     width: 50%;
     border: 3px solid black;
-    padding: 10px;
+    padding: 30px;
+    /* padding-bottom: 100px; */
+}
+label {
+    font-weight: bolder;
+    color: white;
+    background-color: black;
 }
 
 button {
@@ -50,4 +68,28 @@ button {
     width: 25%;
     height: 30px;
     margin: 10px 0;
+}
+
+li {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    border: solid black 3px;
+    /* padding: 3px; */
+    /* position: absolute; */
+    /* display: inline; */
+}
+
+#destinationData {
+    margin-top: 30px;
+    border: solid blue 5px;
+    list-style-type: none;
+    margin-top: 35;
+    padding: 1px;
+    display: inline-block;
+    width: 80%
+}
+
+#statusList {
+    display: inline-block;
 }
