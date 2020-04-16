@@ -17,14 +17,16 @@ h2 {
 
 #planetSelector {
     margin-left: 40%;
+    margin-top: 20;
     background-color: black;
     display: inline-block;
-    border: solid white 3px;
+    border: solid white 1px;
     padding: 10px;
 }
 
 #faultyItems {
-    visibility: hidden;   
+    visibility: hidden;
+    width: 100%;
 }
 
 #launchForm {
@@ -32,7 +34,7 @@ h2 {
     background-size: cover;
     text-align: center;
     margin: auto;
-    width: 25%;
+    width: 40%;
     border: 3px solid black;
     padding: 10px;
 }
@@ -47,20 +49,38 @@ h2 {
     padding: 10px;
 }
 
+#launchStatus {
+    border: solid white 1px;
+    padding: 5px;
+}
+.launchStatusList {
+    /* display: inline-block; */
+    border: solid white 1px;
+    text-align: center;
+    padding: 5px;
+    list-style-image: url(./Images/star-transparent.jpg);
+}
+
 #missionTarget {
     background: url(https://thewallpaper.co//wp-content/uploads/2017/10preview/planet-planets-starsart-cool-images-mobile-orbit-ship-space-hd-space-wallpapers-hd-images-station.jpg);
     background-size: cover;
     text-align: center;
+    font-size: 13;
     margin: 50px auto;
     width: 50%;
     border: 3px solid black;
     padding: 30px;
     /* padding-bottom: 100px; */
 }
-label {
+.inputLabel {
     font-weight: bolder;
     color: white;
     background-color: black;
+    border: solid white 1px;
+    padding: 5px;
+}
+#planetSelectorLabel {
+    color: white;
 }
 
 button {
@@ -83,16 +103,71 @@ li {
     /* display: inline; */
 }
 
+#planetPic {
+    width: 15%;
+    border-radius: 86%;
+    position: absolute;
+    right: 53%;
+    top: 43%;
+}
+
 #destinationData {
     margin-top: 30px;
-    border: solid black 5px;
+    background-color: black;
+    border: solid white 2px;
     list-style-type: none;
     margin-top: 35;
+    margin-left: 60;
+    margin-bottom: 1;
     padding: 1px;
-    display: inline-block;
-    width: 80%
+    /* display: inline-block; */
+    /* width: 80%; */
+    margin-top: 200px;
+}
+#destTitle {
+    margin-bottom: 10;
+    border: solid white 3px;
 }
 
 #statusList {
     display: inline-block;
+    margin: 0 auto;
 }
+
+.typewriterh1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 5s steps(80, end),
+      blink-caret .75s step-end infinite;
+}
+
+.typewriterli {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3s steps(80, end),
+      blink-caret .75s step-end infinite;
+}
+  
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+#spaceVideo {
+    margin-left: 18%;
+    margin-bottom: 20px;
+}
+  
+  
+  /* @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: blue; }
+  } */

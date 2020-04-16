@@ -31,29 +31,19 @@ window.addEventListener('load', function() {
 
    function changeDisplay(index) {
       missionTarget.innerHTML = `
-         <h2>Mission Destination</h2>
-         <br/>
-         <br/>
-         <br/>
-         <br/>
-         <br/>
-         <br/>
+         <h2 id="destTitle">Mission Destination</h2>
             <ol id='destinationData'>
-               <li>Name: ${data[index].name}</li>
-               <li>Diameter: ${data[index].diameter}</li>
-               <li>Star: ${data[index].star}</li>
-               <li>Distance from Earth: ${data[index].distance}</li>
-               <li>Number of Moons: ${data[index].moons}</li>
+               <li class='typewriterli'>Name: ${data[index].name}</li>
+               <li class='typewriterli'>Diameter: ${data[index].diameter}</li>
+               <li class='typewriterli'>Star: ${data[index].star}</li>
+               <li class='typewriterli'>Distance from Earth: ${data[index].distance}</li>
+               <li class='typewriterli'>Number of Moons: ${data[index].moons}</li>
             </ol>
          <img id="planetPic" src="${data[index].image}"></img>
       `;
       let destinationData = document.getElementById('destinationData');
       let planetPic = document.getElementById('planetPic');
-      planetPic.style.width = '100px';
-      planetPic.style.borderRadius = '86%';
-      planetPic.style.position = 'absolute';
-      planetPic.style.right = '56%';
-      planetPic.style.top = '45%';
+      
    };
 
    let planetSelector = document.getElementById('planets');
