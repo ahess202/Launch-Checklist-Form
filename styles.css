@@ -21,6 +21,7 @@ h2 {
     background-color: black;
     display: inline-block;
     border: solid white 1px;
+    border-radius: 30%;
     padding: 10px;
 }
 
@@ -68,9 +69,11 @@ h2 {
     text-align: center;
     font-size: 13;
     margin: 50px auto;
-    width: 50%;
+    width: 60%;
     border: 3px solid black;
+    border-radius: 35%;
     padding: 30px;
+    padding-bottom: 100px;
     /* padding-bottom: 100px; */
 }
 .inputLabel {
@@ -118,11 +121,11 @@ li {
     border: solid white 2px;
     list-style-type: none;
     margin-top: 35;
-    margin-left: 60;
+    margin-left: 70;
     margin-bottom: 1;
     padding: 1px;
     /* display: inline-block; */
-    /* width: 80%; */
+    width: 80%;
     margin-top: 200px;
 }
 #destTitle {
