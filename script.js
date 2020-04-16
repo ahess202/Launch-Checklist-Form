@@ -19,6 +19,7 @@ window.addEventListener('load', function() {
    let cargoStatus = document.getElementById('cargoStatus');
    let faultyItems = document.getElementById('faultyItems');
    let launchStatus = document.getElementById('launchStatus');
+   let warpSpeed = document.getElementById('warpSpeed');
 
    let formInputs = [
       pilotName,
@@ -78,12 +79,14 @@ window.addEventListener('load', function() {
             fuelStatus.innerHTML = 'Fuel level too low to initiate launch!';
             launchStatus.innerHTML = 'Shuttle Not Ready';
             launchStatus.style.color = 'red';
+            warpSpeed.style.visibility = 'hidden';
             e.preventDefault();
          } else if (cargoMass.value > 10000) {
             faultyItems.style.visibility = 'visible';
             cargoStatus.innerHTML = 'Cargo Mass too high to initiate launch!';
             launchStatus.innerHTML = 'Shuttle Not Ready';
             launchStatus.style.color = 'red';
+            warpSpeed.style.visibility = 'hidden';
             e.preventDefault();
          } else {
             faultyItems.style.visibility = 'visible';
@@ -91,6 +94,7 @@ window.addEventListener('load', function() {
             fuelStatus.innerHTML = 'Fuel level high enough for launch!';
             launchStatus.innerHTML = 'Shuttle Ready For Launch';
             launchStatus.style.color = 'green';
+            warpSpeed.style.visibility = 'visible';
             e.preventDefault();
          };
       };
