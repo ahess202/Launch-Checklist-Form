@@ -56,6 +56,7 @@ window.addEventListener('load', function() {
    });
 
    launchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
       let inputsFilled = true;
       for (let i=0; i<formInputs.length; i++) {
          if (formInputs[i].value === '') {
@@ -65,13 +66,10 @@ window.addEventListener('load', function() {
 
       if (!inputsFilled) {
          alert('Must complete all fields!')
-         e.preventDefault();
       } else if (!isNaN(pilotName.value) || !isNaN(copilotName.value)) {
          alert('Please Enter Valid Inputs for Pilot and Co-pilot!');
-         e.preventDefault();
       } else if(isNaN(cargoMass.value)|| isNaN(fuelLevel.value)) {
          alert('Please Enter Valid Inputs for Cargo Mass and Fuel Level!');
-         e.preventDefault();
       } else {
          pilotStatus.innerHTML = `Pilot ${pilotName.value} is ready for launch!`;
          copilotStatus.innerHTML = `Co-pilot ${copilotName.value} is ready for launch!`;
@@ -85,7 +83,6 @@ window.addEventListener('load', function() {
             launchStatus.innerHTML = 'Shuttle Not Ready';
             launchStatus.style.color = 'red';
             warpSpeed.src = './Images/elite-charging.gif';
-            e.preventDefault();
          } else if (fuelLevel.value < 10000) {
             statusList.style.visibility = 'visible';
             fuelStatus.innerHTML = 'Fuel level too low to initiate launch!';
@@ -95,7 +92,6 @@ window.addEventListener('load', function() {
             launchStatus.innerHTML = 'Shuttle Not Ready';
             launchStatus.style.color = 'red';
             warpSpeed.src = './Images/elite-charging.gif';
-            e.preventDefault();
          } else if (cargoMass.value > 10000) {
             statusList.style.visibility = 'visible';
             cargoStatus.innerHTML = 'Cargo Mass too high to initiate launch!';
@@ -105,7 +101,6 @@ window.addEventListener('load', function() {
             launchStatus.innerHTML = 'Shuttle Not Ready';
             launchStatus.style.color = 'red'; 
             warpSpeed.src = './Images/elite-charging.gif';
-            e.preventDefault();
          } else {
             statusList.style.visibility = 'visible';
             cargoStatus.style.color = 'white';
@@ -115,7 +110,6 @@ window.addEventListener('load', function() {
             launchStatus.innerHTML = 'Shuttle Ready For Launch';
             launchStatus.style.color = 'green';
             warpSpeed.src = './Images/elite-warping.gif';
-            e.preventDefault();
          };
       };
    });
