@@ -176,6 +176,11 @@ li {
     border: solid white 1px;
     float: right;
 }
+
+#footerText {
+    color: white;
+    text-align: right;
+}
   
   
   /* @keyframes blink-caret {
