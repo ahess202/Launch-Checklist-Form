@@ -20,6 +20,7 @@ window.addEventListener('load', function() {
    let faultyItems = document.getElementById('faultyItems');
    let launchStatus = document.getElementById('launchStatus');
    let warpSpeed = document.getElementById('warpSpeed');
+   let statusList = document.getElementById('statusList');
 
    let formInputs = [
       pilotName,
@@ -76,44 +77,44 @@ window.addEventListener('load', function() {
          copilotStatus.innerHTML = `Co-pilot ${copilotName.value} is ready for launch!`;
 
          if ((cargoMass.value > 10000) && (fuelLevel.value < 10000)) {
-            faultyItems.style.visibility = 'visible';
+            statusList.style.visibility = 'visible';
             cargoStatus.innerHTML = 'Cargo Mass too high to initiate launch!';
             fuelStatus.innerHTML = 'Fuel level too low to initiate launch!';
             cargoStatus.style.color = 'red';
             fuelStatus.style.color = 'red';
             launchStatus.innerHTML = 'Shuttle Not Ready';
             launchStatus.style.color = 'red';
-            warpSpeed.style.visibility = 'hidden';
+            warpSpeed.src = './Images/elite-charging.gif';
             e.preventDefault();
          } else if (fuelLevel.value < 10000) {
-            faultyItems.style.visibility = 'visible';
+            statusList.style.visibility = 'visible';
             fuelStatus.innerHTML = 'Fuel level too low to initiate launch!';
             cargoStatus.innerHTML = 'Cargo mass low enough for launch!';
             fuelStatus.style.color = 'red';
             cargoStatus.style.color = 'white';
             launchStatus.innerHTML = 'Shuttle Not Ready';
             launchStatus.style.color = 'red';
-            warpSpeed.style.visibility = 'hidden';
+            warpSpeed.src = './Images/elite-charging.gif';
             e.preventDefault();
          } else if (cargoMass.value > 10000) {
-            faultyItems.style.visibility = 'visible';
+            statusList.style.visibility = 'visible';
             cargoStatus.innerHTML = 'Cargo Mass too high to initiate launch!';
             fuelStatus.innerHTML = 'Fuel level high enough for launch!';
             cargoStatus.style.color = 'red';
             fuelStatus.style.color = 'white';
             launchStatus.innerHTML = 'Shuttle Not Ready';
-            launchStatus.style.color = 'red';
-            warpSpeed.style.visibility = 'hidden';
+            launchStatus.style.color = 'red'; 
+            warpSpeed.src = './Images/elite-charging.gif';
             e.preventDefault();
          } else {
-            faultyItems.style.visibility = 'visible';
+            statusList.style.visibility = 'visible';
             cargoStatus.style.color = 'white';
             fuelStatus.style.color = 'white';
             cargoStatus.innerHTML = 'Cargo mass low enough for launch!';
             fuelStatus.innerHTML = 'Fuel level high enough for launch!';
             launchStatus.innerHTML = 'Shuttle Ready For Launch';
             launchStatus.style.color = 'green';
-            warpSpeed.style.visibility = 'visible';
+            warpSpeed.src = './Images/elite-warping.gif';
             e.preventDefault();
          };
       };

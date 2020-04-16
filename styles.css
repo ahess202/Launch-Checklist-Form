@@ -25,7 +25,6 @@ h2 {
 }
 
 #faultyItems {
-    visibility: hidden;
     width: 100%;
 }
 
@@ -33,10 +32,11 @@ h2 {
     background: url(https://wallpaperplay.com/walls/full/4/3/2/31442.jpg);
     background-size: cover;
     text-align: center;
-    margin: auto;
-    width: 40%;
+    margin-top: 50px;
+    width: 15%;
     border: 3px solid black;
     padding: 10px;
+    float: left;
 }
 
 #launchStatusCheck {
@@ -44,9 +44,10 @@ h2 {
     background-size: cover;
     text-align: center;
     margin: 50px auto;
-    width: 50%;
+    width: 80%;
     border: 3px solid black;
     padding: 10px;
+    overflow: auto;
 }
 
 #launchStatus {
@@ -108,7 +109,7 @@ li {
     border-radius: 86%;
     position: absolute;
     right: 53%;
-    top: 42%;
+    top: 43%;
 }
 
 #destinationData {
@@ -130,8 +131,10 @@ li {
 }
 
 #statusList {
+    visibility: hidden;
     display: inline-block;
     margin: 0 auto;
+    padding: 5px;
 }
 
 .typewriterh1 {
@@ -167,10 +170,11 @@ li {
 }
 
 #warpSpeed {
-    width: 300;
+    width: 600;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 50%;
+    border: solid white 1px;
+    float: right;
 }
   
   
